@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+/* Estética de “página” en la vista previa */
+.preview-page {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+
+/* Quitar sombras molestas en textarea Bootstrap */
+textarea.form-control { box-shadow: none !important; }
+
+/* Grid 2 columnas × 3 filas para las barras (siempre 2 columnas) */
+.bar-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(320px, 1fr)) !important;
+  gap: 8px 12px !important;
+}
+.bar-grid .row-item {
+  width: 100% !important; /* ocupa la celda, no la fila completa */
+}
+/* ---- Imprimir SOLO la .print-area en tamaño A4 exacto ---- */
+@media print {
+  /* Ocultar todo menos la zona imprimible */
+  body * { visibility: hidden !important; }
+  .print-area, .print-area * { visibility: visible !important; }
+
+  /* Dimensiones A4 exactas (210×297 mm) */
+  .print-area {
+    position: absolute !important;
+    inset: 0;
+    margin: 0 !important;
+    width: 210mm !important;
+    min-height: 297mm !important;
+    background: white !important;
+    padding: 0 !important;       /* si querés conservar el p-3, borrá esta línea */
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Contenedor interno (si usás .doc dentro de .print-area) */
+  .print-area .doc {
+    /* “márgenes” internos de la página (16mm a cada lado y arriba/abajo) */
+    width: calc(210mm - 32mm) !important;
+    min-height: calc(297mm - 32mm) !important;
+    margin: 16mm auto !important;
+    max-width: none !important;
+    padding: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  /* La página del PDF: A4 exacto, sin margen del navegador */
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  /* Mantener colores de fondo/bordes en impresión */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Asegurá que cualquier .no-print no aparezca */
+  .no-print { display: none !important; }
+}
