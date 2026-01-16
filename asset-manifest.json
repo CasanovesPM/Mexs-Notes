@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/mexs-notes/static/css/main.a93f181e.css",
-    "main.js": "/mexs-notes/static/js/main.eb7b24bd.js",
-    "index.html": "/mexs-notes/index.html",
-    "main.a93f181e.css.map": "/mexs-notes/static/css/main.a93f181e.css.map",
-    "main.eb7b24bd.js.map": "/mexs-notes/static/js/main.eb7b24bd.js.map"
+    "main.css": "/Mexs-Notes/static/css/main.a93f181e.css",
+    "main.js": "/Mexs-Notes/static/js/main.eb7b24bd.js",
+    "index.html": "/Mexs-Notes/index.html",
+    "main.a93f181e.css.map": "/Mexs-Notes/static/css/main.a93f181e.css.map",
+    "main.eb7b24bd.js.map": "/Mexs-Notes/static/js/main.eb7b24bd.js.map"
   },
   "entrypoints": [
     "static/css/main.a93f181e.css",
